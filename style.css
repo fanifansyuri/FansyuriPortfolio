@@ -1,0 +1,188 @@
+/*vw - viewport width*/
+/*vh- viewport height*/
+
+/* css reset */
+/* bintang artinya semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(to right, #be7d66, #d2aa64);
+  height: 100vh;
+  display: flex;
+  align-items: center; /* center secara vertical */
+  justify-content: center; /* center secara horizontal */
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background: white;
+  /* x, y, spread, distance,color*/
+  box-shadow: 2px 4px 12px 8px rgba(49, 53, 59, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  background: url(img-fansyur.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right {
+  width: 50%;
+  padding: 32px 48px;
+  overflow: auto;
+}
+
+.left-container {
+  display: flex;
+  /* ada column dan row*/
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  /* atas-bawah kiri-kanan*/
+  padding: 32px 48px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.name,
+.desc,
+.job-title,
+.contact-button {
+  color: white;
+  text-align: center;
+}
+
+.name {
+  font: weight 700px;
+  font-size: 20px;
+}
+
+.job-title {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.job-title > span {
+  color: yellow;
+  font-weight: 700;
+}
+
+.contact-button {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 16px;
+  text-decoration: none; /* hilangin segala macam dekorasi di teks */
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  background: white;
+  color: #222;
+}
+
+.experience {
+  margin-bottom: 28px;
+}
+
+.experience:last-child {
+  margin-bottom: 0;
+}
+
+.experience-workplace {
+  margin-bottom: 8px;
+}
+
+.experience-workplace > span:first-child {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.experience-workplace > span:nth-child(2) {
+  font-size: 14px;
+}
+
+.experience-workplace > span:last-child {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #be7d66;
+  font-weight: 350;
+}
+
+.experience-desc {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.experience-url {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #d2aa64;
+}
+
+.experience-location {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.experience-desc {
+  font-size: 13px;
+}
+
+/* biar gak teraplikasikan di desktop*/
+.profile-image {
+  display: none;
+}
+
+@media only screen and (max-width: 799px) {
+  body {
+    background: red;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left,
+  .left-container {
+    background: #be7d66;
+  }
+
+  /*kalo mau ditambahin background 
+  .left{
+    background: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Simple-backgrounds-for-desktop-download-620x388.jpg) center / cover no-repeat;
+  }
+  */
+
+  .profile-image {
+    display: block;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 2px 4px 12px 8px rgba(49, 53, 59, 0.12);
+    margin-bottom: 8px;
+  }
+}

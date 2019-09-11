@@ -1,2 +1,0 @@
-# FansyuriPortfolio
-Created with CodeSandbox

@@ -1,0 +1,21 @@
+h1 {
+  color: pink;
+  font-size: 30px;
+}
+
+img {
+  display: block;
+  width: 200px;
+  margin-bottom: 16px;
+  padding: 32px;
+  background: rgba(0, 0, 0, 2);
+}
+
+.image1 {
+  width: 300px;
+  background: black;
+}
+
+.image2 {
+  width: 200px;
+}
