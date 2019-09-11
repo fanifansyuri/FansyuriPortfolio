@@ -6,7 +6,7 @@ h1 {
 img {
   display: block;
   width: 200px;
-
+  margin-bottom: 16px;
   padding: 32px;
   background: rgba(0, 0, 0, 2);
 }
